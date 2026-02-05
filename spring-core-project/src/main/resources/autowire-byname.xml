@@ -15,3 +15,21 @@
 	
 </beans>
 <!-- Dependency Injection using autowire-byname -->
+<!-- 
+When you use autowire="byName", Spring injects a dependency based on the property name matching a bean name in the Spring container.
+
+So the rule is simple 👇
+👉 Property name = Bean ID
+
+How it works (important idea)
+
+Spring looks at:
+
+The setter method / field name in your class
+
+Tries to find a bean with the same name
+
+If found → injects it
+
+If not found → dependency remains null (no error)
+ -->
